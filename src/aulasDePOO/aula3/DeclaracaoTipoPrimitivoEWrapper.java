@@ -58,18 +58,6 @@ public class DeclaracaoTipoPrimitivoEWrapper {
 
         System.out.println("Sua sigla é " + inicialNome + inicialSobrenome);
 
-// exercicio PG - MODULO 1 - funcoes:
-
-//        int num1 = 100;
-//        int num2 = 50;
-//
-//        Boolean trueOrFalse(num1, num2) {
-//          if (num1 % num2 == 0) {
-//              System.out.println(true);
-//          } else {
-//              System.out.println(false);
-//          }
-//        }
 
 // exercicio PG - MODULO 1 - variaveis - exercicio mesa:
 
@@ -83,5 +71,26 @@ public class DeclaracaoTipoPrimitivoEWrapper {
         } else {
             System.out.println("Errou, este não é um número primo");
         }
+
+        //chamar funcao criada no exercicio funcoes:
+        trueOrFalse();
+    }
+
+
+    // exercicio PG - MODULO 1 - funcoes:
+    public static Boolean trueOrFalse() {
+        int num1 = 100;
+        int num2 = 50;
+        boolean isModulo = num1 % num2 == 0;
+        if (isModulo) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+        return isModulo;
     }
 }
+
+
+
+
