@@ -66,21 +66,23 @@ public class DeclaracaoTipoPrimitivoEWrapper {
         System.out.println("Digite um número primo");
         numeroEscolhido = SC.nextInt();
 
-        if (numeroEscolhido % 1 == 0 && numeroEscolhido % numeroEscolhido == 0) {
+        boolean ehPrimo = verifyIsPrime(numeroEscolhido);
+
+        if (ehPrimo) {
             System.out.println("Acertou, este é um número primo");
         } else {
             System.out.println("Errou, este não é um número primo");
         }
 
         //chamar funcao criada no exercicio funcoes:
-        trueOrFalse();
-    }
 
-
-    // exercicio PG - MODULO 1 - funcoes:
-    public static Boolean trueOrFalse() {
         int num1 = 100;
         int num2 = 50;
+        trueOrFalse(num1, num2);
+    }
+
+    //Function to return true or false if number 1 module number 2 is 0
+    public static Boolean trueOrFalse(int num1, int num2) {
         boolean isModulo = num1 % num2 == 0;
         if (isModulo) {
             System.out.println(true);
@@ -88,6 +90,17 @@ public class DeclaracaoTipoPrimitivoEWrapper {
             System.out.println(false);
         }
         return isModulo;
+    }
+
+    //Function to return if a number is prime or not
+    public static Boolean verifyIsPrime(int num) {
+        boolean isPrime = true;
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+            }
+        }
+        return isPrime;
     }
 }
 
